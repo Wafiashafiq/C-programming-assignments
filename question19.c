@@ -1,13 +1,16 @@
-#include<stdio.h>
-int main () {
-    int n;
-    printf("Enter a number:");
+#include <stdio.h>
+int main()
+{
+    int n, i;
+    printf("Enter a number: ");
     scanf("%d", &n);
-    int count=0;
-    while(n>0) {
-        n=n/10;
-        count++;
+    printf("Factors of %d are:\n", n);
+    for(i = 1; i <= n; i++)
+    {
+        if(n % i == 0)
+        {
+            printf("%d ", i);
+        }
     }
-    printf("The number of digits is: %d", count);
     return 0;
 }
